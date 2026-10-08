@@ -8,7 +8,7 @@ import streamlit as st
 
 # ========================== BAGIAN 2: PENGATURAN ==============================
 st.set_page_config(page_title="Dashboard Data Yield", layout="wide")
-st.title("Dashboard Data Yield AARI 2000-2021")
+st.title("Dashboard Data Yield ")
 
 
 # ============================ BAGIAN 3: BACA DATA ==============================
@@ -16,8 +16,8 @@ st.title("Dashboard Data Yield AARI 2000-2021")
 def baca_data():
     """Membaca data dari Parquet; gunakan Excel jika Parquet belum tersedia."""
     path_aplikasi = Path(__file__).parent
-    path_parquet = path_aplikasi / "data_yield_2000_2021.parquet"
-    lokasi_excel = path_aplikasi / "data_yield_2000_2021.xlsx"
+    path_parquet = path_aplikasi / "sesuaikan_file.parquet"
+    lokasi_excel = path_aplikasi / "sesuaikan_file.xlsx"
 
     if path_parquet.exists():
         tabel_data = pd.read_parquet(path_parquet)
